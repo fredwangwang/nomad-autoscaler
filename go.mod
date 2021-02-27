@@ -10,6 +10,7 @@ require (
 	github.com/Azure/go-autorest/autorest/to v0.4.0 // indirect
 	github.com/Azure/go-autorest/autorest/validation v0.3.0 // indirect
 	github.com/DataDog/datadog-api-client-go v1.0.0-beta.7
+	github.com/WavefrontHQ/go-wavefront-management-api v1.14.0
 	github.com/agext/levenshtein v1.2.3 // indirect
 	github.com/armon/go-metrics v0.3.3
 	github.com/aws/aws-sdk-go-v2 v0.23.0
@@ -26,7 +27,6 @@ require (
 	github.com/hashicorp/go-plugin v1.0.1
 	github.com/hashicorp/hcl/v2 v2.3.0
 	github.com/hashicorp/nomad/api v0.0.0-20210224175802-342a905472d9
-	github.com/kr/pretty v0.2.0 // indirect
 	github.com/mattn/go-isatty v0.0.12 // indirect
 	github.com/mitchellh/cli v1.0.0
 	github.com/mitchellh/copystructure v1.0.0
@@ -35,7 +35,7 @@ require (
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	github.com/prometheus/client_golang v1.9.0
 	github.com/prometheus/common v0.15.0
-	github.com/stretchr/testify v1.5.1
+	github.com/stretchr/testify v1.6.1
 	github.com/zclconf/go-cty v1.3.1 // indirect
 	golang.org/x/net v0.0.0-20210119194325-5f4716e94777 // indirect
 	golang.org/x/sys v0.0.0-20210119212857-b64e53b001e4 // indirect

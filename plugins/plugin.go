@@ -41,6 +41,9 @@ const (
 
 	// InternalAPMDatadog is the Datadog APM plugin name.
 	InternalAPMDatadog = "datadog"
+
+	// InternalAPMWavefront is the Wavefront APM plugin name.
+	InternalAPMWavefront = "wavefront"
 )
 
 // ConfigKeyNomadConfigInherit is a generic plugin config map key that supports

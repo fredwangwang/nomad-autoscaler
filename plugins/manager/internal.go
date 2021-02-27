@@ -9,6 +9,7 @@ import (
 	datadog "github.com/hashicorp/nomad-autoscaler/plugins/builtin/apm/datadog/plugin"
 	nomadAPM "github.com/hashicorp/nomad-autoscaler/plugins/builtin/apm/nomad/plugin"
 	prometheus "github.com/hashicorp/nomad-autoscaler/plugins/builtin/apm/prometheus/plugin"
+	wavefront "github.com/hashicorp/nomad-autoscaler/plugins/builtin/apm/wavefront/plugin"
 	targetValue "github.com/hashicorp/nomad-autoscaler/plugins/builtin/strategy/target-value/plugin"
 	awsASG "github.com/hashicorp/nomad-autoscaler/plugins/builtin/target/aws-asg/plugin"
 	azureVMSS "github.com/hashicorp/nomad-autoscaler/plugins/builtin/target/azure-vmss/plugin"
@@ -44,6 +45,9 @@ func (pm *PluginManager) loadInternalPlugin(cfg *config.Plugin, pluginType strin
 	case plugins.InternalTargetGCEMIG:
 		info.factory = gceMIG.PluginConfig.Factory
 		info.driver = "gce-mig"
+	case plugins.InternalAPMWavefront:
+		info.factory = wavefront.PluginConfig.Factory
+		info.driver = "wavefront"
 	case plugins.InternalAPMDatadog:
 		info.factory = datadog.PluginConfig.Factory
 		info.driver = "datadog"
@@ -90,6 +94,7 @@ func (pm *PluginManager) useInternal(plugin string) bool {
 		plugins.InternalTargetAWSASG,
 		plugins.InternalTargetAzureVMSS,
 		plugins.InternalTargetGCEMIG,
+		plugins.InternalAPMWavefront,
 		plugins.InternalAPMDatadog:
 		return true
 	default:
